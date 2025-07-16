@@ -4,9 +4,12 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: "https://barberappointment-86a42.web.app"
+}));
+
 app.use(bodyParser.json());
 
 let bookings = [];
@@ -14,7 +17,6 @@ let bookings = [];
 app.post("/api/book", (req, res) => {
   const { name, age, services, total, time, slot } = req.body;
 
-  // Check if the slot is already booked
   const alreadyBooked = bookings.find(b => b.slot === slot);
   if (alreadyBooked) {
     return res.status(400).json({ message: "Slot already booked!" });

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import StartupPage from './components/startuppage';
 import Booking from './components/Bookingpage/Booking';
+import AdminDashboard from './adminpanel/AdminDashboard';
 
 
 import './App.css';
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<StartupPage />} />
         <Route path="/booking" element={<Booking />} />
+        <Route path="/admin" element={<AdminDashboard />} />
        
       </Routes>
     </Router>
