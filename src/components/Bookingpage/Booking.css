@@ -1,0 +1,35 @@
+.bookingcontainer {
+    background-color:#0e0e2e;
+      background-size: cover;
+    height: 100vh;
+}
+
+
+@media (max-width: 600px)  {
+    .bookingcontainer {
+    background-color:#0e0e2e;
+    background-size: cover;
+    height: 100vh;
+    margin-top: -20px;
+    align-items: center;
+    text-align: center;
+}
+
+.customerdetailshed {
+    color: #8a82fa;
+    font-size: 29px;
+}
+
+.inputfields {
+    width: 90%;
+    height:36px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #8a82fa;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #8a82fa;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+}

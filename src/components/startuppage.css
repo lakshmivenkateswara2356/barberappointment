@@ -1,0 +1,121 @@
+
+
+.startuppagecontainer{
+    background-color:#0e0e2e;
+    background-size: cover;
+    height: 100vh;
+}
+
+.barberpngimg {
+    height: 450px;
+    align-items: center;
+}
+
+.imagearrange {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   
+}
+
+/*textcontent*/
+
+.textcontent {
+    text-align: center;
+}
+
+.bookantext {
+    color: white;
+
+}
+
+.appointmentttxt {
+    color: #7e76e9;
+}
+
+.paragraphtext{
+  color:#7872ac;
+}
+
+.booknowbutton {
+    background-color:#8a82fa;
+    color: white;
+    padding:7px;
+    font-size:18px;
+    border-style: none;
+    border-radius: 15px;
+    height: 50px;
+    width: 270px;
+}
+
+
+/* Mobile: up to 599px */
+@media (max-width: 600px) {
+  /* Styles for mobile phones */
+
+  .startuppagecontainer{
+    background-color:#0e0e2e;
+    background-size: cover;
+    height: 100vh;
+ 
+}
+
+.imagearrange {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   padding: 12px;
+   
+}
+
+
+.barberpngimg {
+    height: 380px;
+    align-items: center;
+    margin-top: 145px;
+}
+
+
+/*textcontent*/
+
+.textcontent {
+    text-align: center;
+}
+
+.bookantext {
+    color: white;
+
+}
+
+.appointmentttxt {
+    color: #7e76e9;
+}
+
+
+.paragraphtext{
+  color:#7872ac;
+}
+
+.booknowbutton {
+    background-color:#8a82fa;
+    color: white;
+    padding:7px;
+    font-size:18px;
+    border-style: none;
+    border-radius: 15px;
+    height: 50px;
+    width: 270px;
+    cursor: pointer;
+}
+}
+
+/* Tablet: 600px to 899px */
+@media (min-width: 600px) and (max-width: 899px) {
+  /* Styles for tablets */
+
+  .startuppagecontainer{
+    background-color:#0e0e2e;
+    background-size: cover;
+    height: 100vh;
+}
+}
