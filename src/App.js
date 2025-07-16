@@ -10,7 +10,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <OTP/>
+      <h1>hello yah hoooo</h1>
     </div>
   );
 }
