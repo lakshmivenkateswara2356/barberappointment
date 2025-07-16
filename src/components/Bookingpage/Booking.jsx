@@ -38,11 +38,36 @@ const Booking = () => {
     return acc + (item ? item.time : 0);
   }, 0);
 
-  const handleBooking = () => {
-    // Later: send to backend & notify
-    setConfirmed(true);
-    console.log("Notify barber & customer ✅");
-  };
+  const handleBooking = async () => {
+  try {
+    const response = await fetch("http://localhost:5000/api/book", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        age,
+        services: selectedServices,
+        total: totalPrice,
+        time: totalTime,
+        slot: selectedSlot,
+      }),
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      console.log("✅ Booking confirmed:", data);
+      setConfirmed(true);
+    } else {
+      alert(data.message || "Something went wrong!");
+    }
+  } catch (error) {
+    console.error("❌ Error booking slot:", error);
+    alert("Server error. Try again later.");
+  }
+};
+
 
   if (confirmed) {
     return (
